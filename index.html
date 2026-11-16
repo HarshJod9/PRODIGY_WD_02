@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101313"><meta name="description" content="A precise, minimal stopwatch with lap tracking.">
+  <title>Secondhand — Stopwatch</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar"><a class="wordmark" href="#top"><span class="mark">◷</span> secondhand</a><span class="top-label">TIME, ON YOUR TERMS</span><button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" title="Toggle sound cues"><span class="sound-icon">◖</span><span>Sound off</span></button></header>
+    <section class="stopwatch-panel" aria-labelledby="title">
+      <div class="panel-heading"><div><p class="eyebrow"><span class="live-dot"></span> READY WHEN YOU ARE</p><h1 id="title">Stopwatch</h1></div><span class="session-label" id="session-label">SESSION 01</span></div>
+      <div class="timer-wrap"><div class="timer-ring" id="timer-ring"><div class="ring-inner"><span class="timer-display" id="display" role="timer" aria-label="00 hours, 00 minutes, 00 seconds, 00 hundredths">00:00:00<span class="hundredths">.00</span></span><span class="timer-caption" id="timer-caption">TIME ELAPSED</span></div></div></div>
+      <div class="controls" aria-label="Stopwatch controls"><button class="control-button secondary" id="reset" type="button" disabled><span class="control-symbol">↺</span><span>Reset</span></button><button class="control-button primary" id="toggle" type="button" aria-label="Start stopwatch"><span class="control-symbol" id="toggle-symbol">▶</span><span id="toggle-label">Start</span></button><button class="control-button secondary" id="lap" type="button" disabled><span class="control-symbol">＋</span><span>Lap</span></button></div>
+      <div class="laps-section"><div class="laps-heading"><h2>Lap times</h2><span id="lap-count">00 LAPS</span></div><div class="laps-empty" id="laps-empty"><span class="empty-dash">—</span><p>Your laps will appear here.<br>Ready when you are.</p></div><ol class="laps-list" id="laps-list" aria-live="polite" aria-relevant="additions"></ol></div>
+      <footer class="panel-footer"><span>Use <kbd>Space</kbd> to start or pause</span><span><span class="footer-dot"></span> SPLIT PRECISION: 10MS</span></footer>
+    </section>
+    <p class="page-note">A small tool for taking your time.</p>
+  </main>
+</body>
+</html>
